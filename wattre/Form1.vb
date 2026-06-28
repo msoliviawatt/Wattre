@@ -7,7 +7,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'MessageBox.Show("Hola")
 
-        simulation.AddRipple(New Point(ClientSize.Width \ 2, ClientSize.Height \ 2), 50)
+        simulation.AddRipple(New Point(ClientSize.Width \ 2, ClientSize.Height \ 2))
 
         'Dim currentRipple As New Ripple()
 
@@ -52,12 +52,17 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles simulationTimer.Tick
-        simulation.Update()
+        simulation.Update(20)
         Invalidate()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DoubleBuffered = True
         simulationTimer.Start()
+    End Sub
+
+    Private Sub Form1_MouseClick(sender As Object, e As MouseEventArgs) Handles MyBase.MouseClick
+        simulation.AddRipple(e.Location)
+        Invalidate()
     End Sub
 End Class
