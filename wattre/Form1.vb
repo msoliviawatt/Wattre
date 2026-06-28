@@ -33,6 +33,7 @@
         '    e.Graphics.DrawEllipse(Pens.BlueViolet, x, y, diameter, diameter)
 
         'Next
+        e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
 
         For Each ripple As Ripple In simulation.Ripples
             Dim diameter As Integer = ripple.Radius * 2
@@ -48,5 +49,15 @@
         simulation.MoveRipplesTo(New Point(ClientSize.Width \ 2, ClientSize.Height \ 2))
 
         Invalidate()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles simulationTimer.Tick
+        simulation.Update()
+        Invalidate()
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DoubleBuffered = True
+        simulationTimer.Start()
     End Sub
 End Class

@@ -22,7 +22,9 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Button1 = New Button()
+        simulationTimer = New Timer(components)
         SuspendLayout()
         ' 
         ' Button1
@@ -34,6 +36,11 @@ Partial Class Form1
         Button1.TabIndex = 0
         Button1.Text = "Create Ripple"
         Button1.UseVisualStyleBackColor = True
+        ' 
+        ' simulationTimer
+        ' 
+        simulationTimer.Interval = 20
+        simulationTimer.Enabled = True
         ' 
         ' Form1
         ' 
@@ -49,5 +56,6 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents Button1 As Button
+    Friend WithEvents simulationTimer As Timer
 
 End Class

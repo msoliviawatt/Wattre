@@ -15,4 +15,10 @@ Public Class Simulation
             ripple.Center = center
         Next
     End Sub
+
+    Public Sub Update()
+        For Each ripple As Ripple In Ripples
+            ripple.Update()
+        Next
+    End Sub
 End Class
