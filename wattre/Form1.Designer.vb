@@ -39,13 +39,14 @@ Partial Class Form1
         ' 
         ' simulationTimer
         ' 
-        simulationTimer.Interval = 20
         simulationTimer.Enabled = True
+        simulationTimer.Interval = 20
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(12.0F, 19.0F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ActiveCaptionText
         ClientSize = New Size(1371, 570)
         Controls.Add(Button1)
         Font = New Font("Webdings", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(2))

@@ -40,7 +40,7 @@
             Dim x As Integer = ripple.Center.X - ripple.Radius
             Dim y As Integer = ripple.Center.Y - ripple.Radius
 
-            e.Graphics.DrawEllipse(Pens.BlueViolet, x, y, diameter, diameter)
+            e.Graphics.DrawEllipse(Pens.Aqua, x, y, diameter, diameter)
         Next
     End Sub
 
