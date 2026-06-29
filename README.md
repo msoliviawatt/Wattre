@@ -1,5 +1,5 @@
 # wattre
-mitre personal/side project to learn to make windows applications with microsoft .NET framework
+MITRE side project
 
 WATTRE = (Olivia) Watt x MTIRE x water (hehe)
 
